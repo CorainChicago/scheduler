@@ -1,10 +1,10 @@
-class CreateSchedules < ActiveRecord::Migration
+class CreateAppointments < ActiveRecord::Migration
   def change
-    create_table :schedules do |t|
+    create_table :appointments do |t|
       t.string :day
-      t.integer :student_id
       t.integer :tutor_id
       t.datetime :time
+      t.integer :student_id
 
       t.timestamps null: false
     end
