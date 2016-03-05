@@ -1,12 +1,15 @@
 require 'rails_helper'
 
 describe User do
+
+  let(:user) (User.new)
+
   describe "validations" do
     it "is not valid without email" do
       user = User.create
       user.valid?
       expect(user.errors).to_not be_empty
-  end
+    end
 
     it "is not valid without first name" do
       user = User.create(email: "myemail34@gmail.com")
@@ -26,6 +29,8 @@ describe User do
       user.valid?
       expect(user.errors).to be_empty
     end
+  end
+
   end
 end  
 
