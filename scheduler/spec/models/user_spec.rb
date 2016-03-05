@@ -22,7 +22,7 @@ describe User do
 
     
     it "should be valid" do
-      user = User.new(email: "myemail2@gmail.com", first_name: "SM", last_name: "Bear", password: "password")
+      user = User.new(email: "myemail2@gmail.com", first_name: "SM", last_name: "Bear", password: "password", status: "student")
       user.valid?
       expect(user.errors).to be_empty
     end
