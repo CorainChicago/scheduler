@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :status
       t.string :schedule_id
-      t.string :password
+      t.string :password_digest
 
       t.timestamps null: false
     end
