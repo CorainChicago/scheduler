@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
   end
 
   def show
+    @appointment = Appointment.find()
   end
 
   def index
@@ -14,6 +15,12 @@ class AppointmentsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+
+  def appt_params
+    params.require(:appointment).permit(:tutor_id, :time, :student_id)
   end
 
 end
